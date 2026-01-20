@@ -26,7 +26,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/re-shopping-cart-web-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/re-shopping-cart-web-app:latest
 
       - name: SSH into EC2 and deploy container
         uses: appleboy/ssh-action@v1.0.0
