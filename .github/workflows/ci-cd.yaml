@@ -53,7 +53,7 @@ jobs:
               -e DB_PASSWORD='${{ secrets.DB_PASSWORD }}' \
               -e JAVA_OPTS="-Xms512m -Xmx512m -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0" \
               -e TZ=UTC \
-              ${{ secrets.DOCKER_USER }}/re-shopping-cart-web-app:latest
+              ${{ secrets.DOCKER_USERNAME }}/re-shopping-cart-web-app:latest
 
             echo ">>> Status & logs"
-            docker ps -a --filter "name=re-shopping-cart-web-ap
+            docker ps -a --filter "name=re-shopping-cart-web-ap"
