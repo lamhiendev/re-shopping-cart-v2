@@ -37,10 +37,10 @@ jobs:
           script: |
             echo ">>> Stopping and removing old container if exists"
             docker rm -f re-shopping-cart-web-app || true
-            docker rmi ${{ secrets.DOCKER_USER }}/re-shopping-cart-web-app:latest || true
+            docker rmi ${{ secrets.DOCKER_USERNAME }}/re-shopping-cart-web-app:latest || true
 
             echo ">>> Pulling latest image from Docker Hub"
-            docker pull ${{ secrets.DOCKER_USER }}/re-shopping-cart-web-app:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/re-shopping-cart-web-app:latest
 
             echo ">>> Running container"
             docker run -d \
